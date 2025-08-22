@@ -1,0 +1,7 @@
+'''Calculate Percentage and use explicit typecasting'''
+a=int(input("Enter prog score: "))
+b=int(input("Enter phys score: "))
+c=int(input("Enter math score: "))
+total=float((a+b+c)/300)
+total=int(total*100)
+print("Total score is "+str(total)+"%")
