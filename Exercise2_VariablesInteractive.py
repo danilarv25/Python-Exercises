@@ -41,3 +41,8 @@ print("While the product is: "+str(prod))
 
 avrg = prod / turns
 print("And the average of the numbers is: "+str(avrg))
+
+'''Part 5'''
+talents = int(input("Enter talents:\n"))
+pounds = int(input("Enter pounds:\n"))
+lots = int(input("Enter lots:\n"))
