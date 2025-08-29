@@ -24,14 +24,15 @@ import random
 
 
 '''How many rolls for two 6s'''
-rounds = totalrolls = 0
-while rounds < 100000:
-    rolls = d1 = d2 = 0
-    while (d1 != 6 or d2 != 6):
-        d1 = random.randint(1,6)
-        d2 = random.randint(1, 6)
-        rolls += 1
-    totalrolls += rolls
-    rounds += 1
-avg = totalrolls/1000
-print(f"On average, it took {avg:.2f} rolls to get two sixes.")
+# rounds = totalrolls = 0
+# while rounds < 100000:
+#     rolls = d1 = d2 = 0
+#     while (d1 != 6 or d2 != 6):
+#         d1 = random.randint(1,6)
+#         d2 = random.randint(1, 6)
+#         rolls += 1
+#     totalrolls += rolls
+#     rounds += 1
+# avg = totalrolls/1000
+# print(f"On average, it took {avg:.2f} rolls to get two sixes.")
+
