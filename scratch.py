@@ -36,3 +36,54 @@ import random
 # avg = totalrolls/1000
 # print(f"On average, it took {avg:.2f} rolls to get two sixes.")
 
+'''Sum function'''
+# def sumxy(num1, num2):
+#     result = x + y
+#     print(result)
+#     return
+# x = int(input("x: "))
+# y = int(input("y: "))
+# sumxy(x,y)
+
+'''List storing'''
+def makeList():
+    list = []
+    x = input("What item? (0 to quit): ")
+    while x != "0":
+        list.append(x)
+        x = input("What item? (0 to stop listing): ")
+    return list
+
+def storeList(dict, list):
+    newdict = {}
+    newdict.update(dict)
+    name = input("Name list: ")
+    newdict.update({name: list})
+    return newdict
+
+def listMain():
+    dict = {}
+    x = "y"
+    while x != "n":
+        newlist = makeList()
+        dict = storeList(dict, newlist)
+        x = input("Continue? y or n: ")
+    for i in dict:
+        print(i + "    " + str(dict[i]))
+    return dict
+dictStorage = {}
+task = int(input("Do task? (1) for yes, (0) for no:"))
+while task != 0:
+    task = int(input("What do you want to do?\n(1) Make a list\n: "))
+    if task == 1:
+        dictStorage.update(listMain())
+
+print(dictStorage)
+## oldict = {}
+## x = "y"
+## while x !="n":
+##     newlist = makeList()
+##     oldict = storeList(oldict, newlist)
+##     x = input("Continue? y or n: ")
+#
+## print()
