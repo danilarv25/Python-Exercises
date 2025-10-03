@@ -87,3 +87,16 @@ import random
 ##     x = input("Continue? y or n: ")
 #
 ## print()
+list = []
+emplist = []
+for i in range(100):
+    list.append(random.randint(1,9))
+
+print(list)
+
+print(list.index(7))
+for i in list:
+    if i not in emplist:
+        emplist.append(i)
+
+print(emplist)
