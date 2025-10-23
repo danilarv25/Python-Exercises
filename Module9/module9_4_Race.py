@@ -67,7 +67,8 @@ while len(leaderboard) < 10:
         if end[i] == scores[scorespot]:
             print(f"{i} : {end[i]}")
             leaderboard[i] = end[i]
-            scorespot+=1
+            if scorespot < 9:
+                scorespot+=1
 
 # for i in leaderboard:
 #     print(f"{i} : {leaderboard[i]}")
