@@ -50,14 +50,12 @@ Travelled: {cars[i].travelled_distance} km\n"""
 )
             racing = False
 
+# Creating the leaderboard
 end = {}
 leaderboard = {}
 scorespot = 0
 for i in cars:
     end[cars[i].registration] = cars[i].travelled_distance
-
-# for i in end:
-#     print(f"{i} : {end[i]}")
 
 print("THE LEADERBOARD\n")
 
@@ -73,3 +71,6 @@ while len(leaderboard) < 10:
 
 # for i in leaderboard:
 #     print(f"{i} : {leaderboard[i]}")
+
+# for i in end:
+#     print(f"{i} : {end[i]}")
