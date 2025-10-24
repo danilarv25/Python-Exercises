@@ -19,7 +19,10 @@ class Student:
         return
 
 class Lecture:
-    def __init__(self):
+    def __init__(self, teacher, topic, date):
+        self.teacher = teacher
+        self.topic = topic
+        self.date = date
         self.attendence = []
 
     def log_student(self, student):
@@ -39,7 +42,22 @@ class Lecture:
             print(i.name)
         print("")
 
-session = Lecture()
+    def show_teacher(self):
+        print(f"This lecture's teacher: {self.teacher.name}")
+        return
+
+class Teacher:
+    def __init__(self, name, expertise):
+        self.name = name
+        self.expertise = expertise
+
+    def greet(self):
+        print("Hello class!\n")
+
+teacher1 = Teacher("John Smith", "Mathematics")
+session = Lecture(teacher1, "Math 101", "24-10-2025")
+session.show_teacher()
+teacher1.greet()
 
 student1 = Student("Bob", "B", 19)
 student2 = Student("Jill", "B", 21)
