@@ -1,6 +1,6 @@
 import requests, json
 
-apikey = "5418d9e1439bf6bb70fa6f64f7dcd8c6"
+apikey = ""
 
 city = input("Enter city name: ")
 
