@@ -22,8 +22,8 @@ class Car:
         self.travelled_distance += abs(self.current_speed)*hours
 
 class ElectricCar(Car):
-    def __init__(self, registration, max_speed, capacity):
-        super().__init__(registration, max_speed)
+    def __init__(self, registration, max_speed, capacity, current_speed = 0):
+        super().__init__(registration, max_speed, current_speed)
         self.capacity = capacity
 
     def accelerate(self, kmh:int):
@@ -31,10 +31,11 @@ class ElectricCar(Car):
 
     def drive(self, hours:float):
         super().drive(hours)
+        print(f"{self.registration} km counter: {self.travelled_distance}")
 
 class GasolineCar(Car):
-    def __init__(self, registration, max_speed, capacity):
-        super().__init__(registration, max_speed)
+    def __init__(self, registration, max_speed, capacity, current_speed = 0):
+        super().__init__(registration, max_speed, current_speed)
         self.capacity = capacity
 
     def accelerate(self, kmh:int):
@@ -42,6 +43,7 @@ class GasolineCar(Car):
 
     def drive(self, hours:float):
         super().drive(hours)
+        print(f"{self.registration} km counter: {self.travelled_distance}")
 
 class Race:
     def __init__(self, name:str, km:int, racer_list):
@@ -73,8 +75,14 @@ class Race:
                 return True
 
 
-ecar = ElectricCar("ABC-15", 180, 52.5)
-gcar = GasolineCar("ABC-123", 165, 32.3)
+ecar = ElectricCar("ABC-15", 180, 52.5, current_speed = 60)
+gcar = GasolineCar("ABC-123", 165, 32.3, current_speed = 60)
+
+for i in range(3):
+    ecar.drive(1)
+    gcar.drive(1)
+    ecar.accelerate(random.randint(-10, 15))
+    gcar.accelerate(random.randint(-10, 15))
 
 # cars = []
 # num = 1
