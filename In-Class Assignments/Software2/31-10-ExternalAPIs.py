@@ -6,7 +6,7 @@ request = "https://api.tvmaze.com/search/shows?q="+keyword
 
 try:
     response = requests.get(request).json()
-    if response.status_code == 200:
+    if requests.get(request).status_code == 200:
         for i in response:
             print(i["show"]["name"])
             print(f"    {i["score"]}")
