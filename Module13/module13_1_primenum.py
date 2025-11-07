@@ -1,8 +1,6 @@
 from flask import Flask, request, Response
 import json
 
-from Module12.module12_1_chucknorris import response
-
 app = Flask(__name__)
 
 @app.route('/primetest/<number>')
